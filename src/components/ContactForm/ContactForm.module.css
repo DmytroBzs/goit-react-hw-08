@@ -1,0 +1,38 @@
+.form {
+  border-radius: 6px;
+  padding: 15px 20px;
+  width: 350px;
+  height: 100%;
+  margin-top: 5px;
+}
+.btnWrapper {
+  text-align: center;
+}
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
+  padding-bottom: 15px;
+}
+.input {
+  border-radius: 4px;
+  border: 2px solid black;
+  height: 100%;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.btn {
+  font-size: 16px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  height: 30px;
+  width: 150px;
+  background-color: #4682b4;
+}
+
+.err {
+  color: red;
+}
