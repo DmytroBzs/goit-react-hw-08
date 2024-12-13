@@ -1,10 +1,10 @@
-import DocumentTitle from '../../components/DocumentTitle/DocumentTitle';
+import PageTitle from '../../components/PageTitle/PageTitle';
 import RegistrationForm from '../../components/RegistrationForm/RegistrationForm';
 
 const RegisterPage = () => {
   return (
     <div>
-      <DocumentTitle>Login</DocumentTitle>
+      <PageTitle>Login</PageTitle>
       <RegistrationForm />
     </div>
   );
