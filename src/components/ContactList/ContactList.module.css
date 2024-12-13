@@ -1,13 +1,17 @@
+/* Стилі для списку контактів */
 .list {
-  list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 20px;
+
+  padding: 20px;
+  list-style: none;
 }
+
+/* Контейнер для карток контактів */
 .item {
-  border: 1px solid rgb(230, 223, 223);
-  border-radius: 5px;
-  padding: 8px;
-  width: 300px;
-  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-evenly;
 }

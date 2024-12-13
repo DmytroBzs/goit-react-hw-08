@@ -12,7 +12,7 @@ export default function SearchBox() {
     dispatch(changeFilter(event.target.value));
   };
   return (
-    <div>
+    <div className={css.container}>
       <label
         style={{ marginLeft: 20, marginBottom: 5 }}
         className={css.wrapper}
