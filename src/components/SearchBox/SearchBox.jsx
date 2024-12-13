@@ -1,4 +1,5 @@
-import { changeFilter, selectNameFilter } from '../../redux/filtersSlice';
+import { changeFilter } from '../../redux/filters/slice';
+import { selectNameFilter } from '../../redux/filters/selectors';
 import { useDispatch, useSelector } from 'react-redux';
 import css from './SearchBox.module.css';
 import { useId } from 'react';
@@ -12,7 +13,11 @@ export default function SearchBox() {
   };
   return (
     <div>
-      <label className={css.wrapper} htmlFor={id}>
+      <label
+        style={{ marginLeft: 20, marginBottom: 5 }}
+        className={css.wrapper}
+        htmlFor={id}
+      >
         Search by name
       </label>
       <input

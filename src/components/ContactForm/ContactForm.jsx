@@ -1,6 +1,6 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { nanoid } from 'nanoid';
-import { addContact } from '../../redux/contactsOps';
+import { addContact } from '../../redux/contacts/operations';
 import { useDispatch } from 'react-redux';
 import * as Yup from 'yup';
 import css from './ContactForm.module.css';
@@ -12,10 +12,8 @@ const ContactSchema = Yup.object().shape({
     .max(50, 'Too Long!')
     .required('Required'),
   number: Yup.string()
-    .trim()
-    .min(7, 'Too Short!')
-    .max(20, 'Too Long!')
-    .required('Required'),
+    .matches(/^\d{10}$/, 'Phone number must be exactly 10 digits')
+    .required('Phone number is required'),
 });
 
 export default function ContactForm() {
@@ -54,7 +52,7 @@ export default function ContactForm() {
               type="text"
               name="name"
               id={nameFieldId}
-              placeholder="Harry Potter"
+              placeholder="Enter the name"
             ></Field>
             <ErrorMessage className={css.err} name="name" component="span" />
           </div>
@@ -66,7 +64,7 @@ export default function ContactForm() {
               type="text"
               name="number"
               id={numberFieldId}
-              placeholder="666-66-66"
+              placeholder="0934277435"
             ></Field>
             <ErrorMessage className={css.err} name="number" component="span" />
           </div>
