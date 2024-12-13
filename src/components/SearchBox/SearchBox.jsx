@@ -18,7 +18,7 @@ export default function SearchBox() {
         className={css.wrapper}
         htmlFor={id}
       >
-        Search by name
+        Search by name or number
       </label>
       <input
         className={css.input}
@@ -26,7 +26,7 @@ export default function SearchBox() {
         type="text"
         value={filterName}
         onChange={handleChange}
-        placeholder="Please enter the name"
+        placeholder="Please enter the value"
       />
     </div>
   );
