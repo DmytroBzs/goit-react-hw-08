@@ -7,7 +7,6 @@ import { refreshUser } from '../../redux/auth/operations';
 import RestrictedRoute from '../../components/RestrictedRoute/RestrictedRoute';
 import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
 import Loader from '../Loader/Loader';
-import { fetchContacts } from '../../redux/contacts/operations';
 
 const HomePage = lazy(() => import('../../pages/HomePage/HomePage'));
 const ContactsPage = lazy(() =>
@@ -24,8 +23,8 @@ export default function App() {
 
   useEffect(() => {
     dispatch(refreshUser());
-    dispatch(fetchContacts());
   }, [dispatch]);
+
   return isRefreshing ? (
     <Loader />
   ) : (
